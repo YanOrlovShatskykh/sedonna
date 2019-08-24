@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #333333;
+    text-transform: uppercase;
+
+    background-color: #f2f2f2;
+    background-image: url(../img/index-mountains-bg-2.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-navigation ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.site-navigation a {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+
+    outline: none;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #81b3d2;
+}
+
+.site-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
+.promo {
+    text-align: center;
+}
+
+.advantages-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.advantages-item-1 {
+    width: 400px;
+    height: 256px;
+
+    background-color: #81b3d2;
+}
+
+.advantages-title-white {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.advantages-number-white {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.advantages-description-white {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.advantages-title {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.advantages-number {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+}
+
+.advantages-description {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+}
+
+.search b {
+    display: block;
+
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-align: center;
+}
+
+.search p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.search button {
+    width: 568px;
+    height: 86px;
+
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #766357;
+    outline: none;
+    border: none;
+}
+
+.search button:hover {
+    background-color: #604e43;
+}
+
+.search button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+.main-footer {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer > b {
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.social-content {
+    list-style: none;
+    text-align: center;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright b {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.footer-copyright a {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.modal {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+
+
+    background-color: #ffffff;
+}
+
+.search-form input[type="text"] {
+    font: inherit;
+    text-transform: uppercase;
+
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.search-form input[type="text"]:hover {
+    background-color: #ebebeb;
+}
+
+.search-form input[type="text"]:focus {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    outline: none;
+}
+
+.search-form button {
+    font-size: 21px;
+    font-weight: 700;
+    color: #a9a9a9;
+
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.search-form button:hover {
+    color: #000000;
+}
+
+.search-form button:active  {
+    color: #81b3d2;
+    outline: none;
+}
+
+.search-form button:focus {
+    outline: none;
+}
+
+.search-form-btn[type="submit"] {
+    width: 458px;
+    height: 58px;
+    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #81b3d2;
+    border: none;
+}
+
+.search-form-btn[type="submit"]:hover {
+    color: #ffffff;
+    background-color: #669ec0;
+}
+
+.search-form-btn[type="submit"]:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
