@@ -15,6 +15,12 @@ body {
     background-repeat: no-repeat;
 }
 
+.inner-page {
+    background-image: url(../img/hotels-search_form-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
 a {
     text-decoration: none;
 }
@@ -35,6 +41,11 @@ a {
     outline: none;
 }
 
+.site-navigation-current a {
+    color: #766357;
+    cursor: default;
+}
+
 .site-navigation a:hover,
 .site-navigation a:focus {
     color: #81b3d2;
@@ -42,6 +53,13 @@ a {
 
 .site-navigation a:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-current a:hover,
+.site-navigation-current a:active,
+.site-navigation-current a:focus {
+    color: #766357;
+    cursor: default;
 }
 
 .page-title {
@@ -158,6 +176,225 @@ a {
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
 }
+
+
+
+
+/* inner-page */
+
+.filter-form fieldset {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+}
+
+.filter-form label {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.filter-form .range-from,
+.filter-form .range-to {
+    font-size: 14px;
+    font-weight: 21px;
+    color: red;
+
+    text-transform: uppercase;
+}
+
+.btn-filter {
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+
+    background: none;
+    border: 2px solid #ffffff;
+
+    text-transform: uppercase;
+}
+
+.btn-filter:hover {
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.search-result-header p {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.sort-list {
+    list-style: none;
+}
+
+.sort-list-title {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+} 
+
+.sort-item {
+    font-size: 12px;
+    font-weight: 18px;
+    color: rgba(0, 0, 0, 0.3);
+
+    border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-item:hover {
+    color: #81b3d2;
+    border: none;
+}
+
+.sort-item:active,
+.sort-item:focus {
+    color: #000000;
+    outline: none;
+    border: none;
+}
+
+.sort-item-current {
+    font-size: 12px;
+    line-height: 18px;
+    color: #81b3d2;
+
+    outline: none;
+    cursor: default;
+}
+
+.triangles {
+    display: flex;
+}
+
+.triangle-up {
+    width: 0;;
+    height: 0;
+
+    font-size: 0;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #cacaca;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    margin-left: 12px;
+
+    font-size: 0;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #cacaca;
+}
+
+.triangle-up:hover {
+    border-bottom-color: #000000;
+    
+}
+
+.triangle-down:hover {
+    border-top-color: #000000;
+}
+
+.triangle-up:active,
+.triangle-up:focus {
+    border-bottom-color: #81b3d2;
+    outline: none;
+}
+
+.triangle-down:active,
+.triangle-down:focus {
+    border-top-color: #81b3d2;
+    outline: none;
+}
+
+.triangle-current {
+    border-bottom-color: #81b3d2;
+    border-top-color: #81b3d2;
+    cursor: default;
+}
+
+.triangle-current:hover {
+    border-bottom-color: #81b3d2;
+    border-top-color: #81b3d2;
+}
+
+.search-result-name {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.search-result-name:hover,
+.search-result-name:focus {
+    color: #81b3d2;
+    outline: none;
+}
+
+.search-result-name:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search-result-type,
+.search-result-price {
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #333333;
+}
+
+.search-result-button {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.search-result-more {
+    background-color: #81b3d2;
+}
+
+.search-result-more:hover,
+.search-result-more:focus {
+    background-color: #669ec0;
+    outline: none;
+}
+
+.search-result-more:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;    
+}
+
+.search-result-to_book {
+    background-color: #766357;
+}
+
+.search-result-to_book:hover,
+.search-result-to_book:focus {
+    background-color: #604e43;
+    outline: none;
+}
+
+.search-result-to_book:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+.search-result-rating {
+    color: #666666;
+
+    background-color: #f2f2f2;
+}
+
+/* footer */
 
 .main-footer {
     background-color: rgba(255, 255, 255, 0.9);
