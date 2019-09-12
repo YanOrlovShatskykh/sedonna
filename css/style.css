@@ -270,14 +270,15 @@ a {
 .filter-form {
     display: flex;
     padding: 27px 72px;
+    padding-bottom: 11px;
 }
 
 .filter-form fieldset {
     display: flex;
-    /* flex-direction: column; */
     margin: 0;
     margin-right: 115px;
     padding: 0;
+
     border: none;
 }
 
@@ -352,19 +353,50 @@ a {
     background-color: #ffffff;
 }
 
+.filter-form fieldset:last-child {
+    width: 320px;
+    margin: 0;
+    margin-left: auto;
+
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.search-result-header {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+}
+
 .search-result-header p {
+    margin: 33px 0;
+    padding-left: 72px;
+
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    color: #000000;
+
 }
 
 .sort-list {
+    display: flex;
+    margin: auto 0;
+    padding: 0;
     list-style: none;
+
 }
 
-.sort-list-title {
+.sort-list li {
+    margin-right: 35px;
+}
+
+li.sort-list-title {
+    margin-left: 50px;
+    margin-right: 45px;
     font-size: 12px;
-    line-height: 18px;
+    /* line-height: 21px; */
     color: #000000;
 } 
 
@@ -399,6 +431,9 @@ a {
 
 .triangles {
     display: flex;
+    margin: auto 0;
+    margin-right: 73px;
+    margin-left: auto;
 }
 
 .triangle-up {
@@ -425,8 +460,7 @@ a {
 }
 
 .triangle-up:hover {
-    border-bottom-color: #000000;
-    
+    border-bottom-color: #000000;    
 }
 
 .triangle-down:hover {
@@ -456,11 +490,35 @@ a {
     border-top-color: #81b3d2;
 }
 
+.search-result-item {
+    display: flex;
+    padding: 30px 72px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.search-result-img {
+    width: 135px;
+    height: 90px;
+    margin-right: 30px;
+}
+
+.search-result-description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .search-result-name {
+    margin-top: -5px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
     color: #000000;
+}
+
+.search-result-booking {
+    display: flex;
 }
 
 .search-result-name:hover,
@@ -475,6 +533,9 @@ a {
 
 .search-result-type,
 .search-result-price {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
     font-size: 14px;
     line-height: 21px;
 
@@ -482,13 +543,18 @@ a {
 }
 
 .search-result-button {
-    font-size: 14px;
+    padding: 4px 17px;
+    font-size: 0;
     line-height: 21px;
     font-weight: 700;
     color: #ffffff;
 }
 
 .search-result-more {
+    margin-right: 6px;
+
+    font-size: 14px;
+
     background-color: #81b3d2;
 }
 
@@ -504,6 +570,8 @@ a {
 }
 
 .search-result-to_book {
+    font-size: 14px;
+
     background-color: #766357;
 }
 
@@ -519,7 +587,25 @@ a {
 }
 
 .search-result-rating {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.search-result-star {
+    margin: 0;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.rating-number {
+    width: 110px;
+    height: 27px;
+    margin: 0;
+    margin-top: auto;
+
     color: #666666;
+    text-align: center;
 
     background-color: #f2f2f2;
 }
@@ -533,6 +619,10 @@ a {
     bottom: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.inner-page .main-footer {
+    position: static;
 }
 
 .main-footer > b {
