@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
 
@@ -22,10 +23,11 @@ body {
     background-repeat: no-repeat;    
 }
 
-.inner-page {
+.inner-page .container {
+    background-color: #fefefe;
     background-image: url(../img/hotels-search_form-bg.jpg);
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
 }
 
 a {
@@ -220,6 +222,7 @@ a {
 .search {
     text-align: center;
 }
+
 .search b {
     display: block;
 
@@ -262,23 +265,65 @@ a {
     background-color: #503e33;
 }
 
-
-
-
 /* inner-page */
 
+.filter-form {
+    display: flex;
+    padding: 27px 72px;
+}
+
 .filter-form fieldset {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0;
+    margin-right: 115px;
+    padding: 0;
+    border: none;
+}
+
+.filter-form legend {
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
     color: #ffffff;
-    border: none;
+}
+
+.filter-form ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.filter-option {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 25px;
+
+    color: #ffffff; 
+}
+
+.filter-input-checkbox::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 23px;
+    margin-left: -25px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked::before {
+    background-image: url(../img/checkbox-on.svg);
 }
 
 .filter-form label {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    vertical-align: middle;
 }
 
 .filter-form .range-from,
@@ -482,25 +527,97 @@ a {
 /* footer */
 
 .main-footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 .main-footer > b {
+    margin-left: 138px;
+    margin-top: 50px;
     font-size: 21px;
     line-height: 26px;
     color: #000000;
+    vertical-align: middle;
 }
 
 .social-content {
+    display: flex;
+    justify-content: space-between;
+    width: 151px;
+    margin: 36px 0;
+
+    font-size: 0;
     list-style: none;
     text-align: center;
 }
 
+.social-content a {
+    display: block;
+    width: 46px;
+    height: 48px;
+
+    background-repeat: no-repeat;
+    background-color: #81b3d2;
+}
+
+.social-content li:first-child a {
+    background-image: url(../img/footer-icon-tw.svg);
+    background-position: center;
+}
+
+.social-content a:hover {
+    background-color: #669ec0;
+}
+
+.social-content li:first-child a:active {
+    background-image: url(../img/footer-icon-tw-opacity.svg); 
+    background-color: #5496bd;
+}
+
+.social-content li:nth-child(2) a {
+    background-image: url(../img/footer-icon-fb.svg);
+    background-position: center;
+}
+
+.social-content a:hover {
+    background-color: #669ec0;
+}
+
+.social-content li:nth-child(2) a:active {
+    background-image: url(../img/footer-icon-fb-opacity.svg); 
+    background-color: #5496bd;
+}
+
+.social-content li:last-child a {
+    background-image: url(../img/footer-icon-youtube.svg);
+    background-position: center;
+}
+
+.social-content a:hover {
+    background-color: #669ec0;
+}
+
+.social-content li:last-child a:active {
+    background-image: url(../img/footer-icon-youtube-opacity.svg); 
+    background-color: #5496bd;
+}
+
 .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0;
+    margin-right: 100px;
     text-align: center;
 }
 
 .footer-copyright b {
+    margin: auto 0;
+    
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -508,26 +625,62 @@ a {
 }
 
 .footer-copyright a {
-    font-size: 14px;
+    width: 115px;
+    height: 41px;
+    margin: auto 0;
+
+    font-size: 0;
     line-height: 26px;
     font-weight: 700;
     color: #000000;
+
+    background-image: url(../img/footer-icon-logo_name.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.footer-copyright a:hover {
+    background-image: url(../img/footer-icon-logo_name-blue.svg);
+}
+
+.footer-copyright a:active {
+    background-image: url(../img/footer-icon-logo_name-gray.svg);
+}
+
+/* modal */
+
 .modal {
+    position: absolute;
+    bottom: 205px;
+    left: 316px;
+    width: 458px;
+    height: 285px;
+    margin: 0 auto;
+    padding: 55px;
+
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
     color: #000000;
-
 
     background-color: #ffffff;
 }
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form label {
+    padding-top: 7px;
+}
 
 .search-form input[type="text"] {
+    margin-left: auto;
+    padding: 8px 13px;
+    
     font: inherit;
     text-transform: uppercase;
-
+    
     background-color: #f2f2f2;
     border: none;
 }
@@ -538,17 +691,219 @@ a {
 
 .search-form input[type="text"]:focus {
     background-color: #ffffff;
-    border: 2px solid #e5e5e5;
-    outline: none;
+    outline: 2px solid #e5e5e5;
+}
+
+.form-date-in,
+.form-date-out {
+    width: 320px;
+    height: 22px;
+    margin-bottom: 30px;
+}
+
+#form-adults {
+    margin: 0;
+}
+
+#form-children {
+    margin: 0;
 }
 
 .search-form button {
     font-size: 21px;
     font-weight: 700;
     color: #a9a9a9;
-
+    
     background-color: #f2f2f2;
     border: none;
+}
+
+.form-adult {
+    width: 13px;
+    height: 22px;
+    
+    text-align: center;
+}
+
+.btn-adults-minus {
+    margin: 0;
+    margin-left: 41px;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+}
+
+.btn-adults-minus:hover {
+    background-color: #ebebeb;
+}
+
+.btn-adults-minus::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 3px;
+    margin: 0 auto;
+    
+    background-color: #a9a9a9;
+}
+
+.btn-adults-minus:hover::before {
+    background-color: #000000;
+}
+
+.btn-adults-minus:active::before {
+    background-color: #81b3d2;
+}
+
+.btn-adults-plus {
+    position: relative;
+    margin: 0;
+    margin-right: 53px;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+}
+
+.btn-adults-plus:hover {
+    background-color: #ebebeb;
+}
+
+.btn-adults-plus::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    
+    display: block;    
+    width: 12px;
+    height: 3px;
+    margin: 0 auto;
+    
+    background-color: #a9a9a9;
+    transform: rotate(90deg);
+}
+
+.btn-adults-plus:hover::before {
+    background-color: #000000;
+}
+
+.btn-adults-plus:active::before {
+    background-color: #81b3d2;
+}
+
+.btn-adults-plus::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    
+    display: block;
+    margin: 0 auto;
+    width: 12px;
+    height: 3px;
+    
+    background-color: #a9a9a9;
+}
+
+.btn-adults-plus:hover::after {
+    background-color: #000000;
+}
+
+.btn-adults-plus:active::after {
+    background-color: #81b3d2;
+}
+
+.form-children {
+    width: 13px;
+    height: 22px;
+    text-align: center;
+}
+
+.btn-children-minus {
+    margin: 0;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    margin-left: 24px;
+}
+
+.btn-children-minus:hover {
+    background-color: #ebebeb;
+}
+
+.btn-children-minus::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #a9a9a9;
+}
+
+.btn-children-minus:hover::before {
+    background-color: #000000;
+}
+
+.btn-children-minus:active::before {
+    background-color: #81b3d2;
+}
+
+.btn-children-plus {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-left: 0;
+}
+
+.btn-children-plus:hover {
+    background-color: #ebebeb;
+}
+
+.btn-children-plus::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    
+    display: block;
+    width: 12px;
+    height: 3px;
+    margin: 0 auto;
+    
+    background-color: #a9a9a9;
+    transform: rotate(90deg);
+}
+
+.btn-children-plus:hover::before {
+    background-color: #000000;
+}
+
+.btn-children-plus:active::before {
+    background-color: #81b3d2;
+}
+
+.btn-children-plus::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    display: block;
+    width: 12px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #a9a9a9;
+}
+
+.btn-children-plus:hover::after {
+    background-color: #000000;
+}
+
+.btn-children-plus:active::after {
+    background-color: #81b3d2;
+}
+
+.search-form-btn {
+    margin-top: 54px;
 }
 
 .search-form button:hover {
@@ -574,7 +929,7 @@ a {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-
+    
     background-color: #81b3d2;
     border: none;
 }
