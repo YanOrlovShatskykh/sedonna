@@ -20,7 +20,8 @@ body {
     background-color: #ffffff;
     background-image: url(../img/index-mountains-bg-2.jpg);
     background-position: top center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.2);   
 }
 
 .inner-page .container {
@@ -32,6 +33,24 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    white-space: nowrap;
+    
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .site-navigation ul {
@@ -88,7 +107,7 @@ a {
     width: 450px;
     margin: 0 auto;
     margin-top: 570px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     font-size: 21px;
     line-height: 26px;
@@ -98,7 +117,7 @@ a {
 
 .promo {
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 
     text-align: center;
 }
@@ -107,7 +126,7 @@ a {
     display: flex;
     flex-wrap: wrap; 
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     padding: 0;
     
     list-style: none;
@@ -202,7 +221,7 @@ a {
     width: 76px;
     height: 76px;
     margin: 0 auto;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -225,6 +244,7 @@ a {
 
 .search b {
     display: block;
+    margin-bottom: 25px;
 
     font-size: 30px;
     line-height: 36px;
@@ -234,7 +254,7 @@ a {
 
 .search p {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
 
     text-align: center;
 }
@@ -258,6 +278,7 @@ a {
 
 .search button:hover {
     background-color: #604e43;
+    cursor: pointer;
 }
 
 .search button:active {
@@ -298,26 +319,33 @@ a {
 }
 
 .filter-option {
+    position: relative;
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
-    padding-left: 25px;
+    padding-left: 40px;
 
     color: #ffffff; 
 }
 
-.filter-input-checkbox::before {
+.checkbox-custom::before {
     content: "";
-    display: block;
+    position: absolute;
+    top: 3px;
     width: 27px;
     height: 23px;
-    margin-left: -25px;
+    margin-left: -40px;
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
 }
 
-.filter-input-checkbox:checked::before {
+.filter-input-checkbox:checked + .checkbox-custom::before {
     background-image: url(../img/checkbox-on.svg);
+}
+
+.checkbox-custom:hover::before,
+.filter-option label:hover {
+    cursor: pointer;
 }
 
 .filter-form label {
@@ -327,16 +355,68 @@ a {
     vertical-align: middle;
 }
 
+.range-cost b {
+    margin-bottom: 12px;
+}
+
+.range {
+    position: relative;
+    display: flex;
+    margin-bottom: 9px;
+}
+
+.range::before {
+    content: "";
+    position: absolute;
+    left: 160px;
+    top: 7px;
+    width: 2px;
+    height: 22px;
+    background-color: #ffffff;
+}
+
 .filter-form .range-from,
 .filter-form .range-to {
+    width: 160px;
+    height: 36px;
+
     font-size: 14px;
     font-weight: 21px;
-    color: red;
-
+    color: #ffffff;
+    text-align: center;
     text-transform: uppercase;
+
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+.filter-form .range-from {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.filter-form .range-from {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+}
+
+.filter-form .range-to {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+}
+
+input[type="range"] {
+    width: 320px;
+    margin-bottom: 23px;
 }
 
 .btn-filter {
+    margin-left: 87px;
+    width: 137px;
+    height: 35px;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
@@ -345,6 +425,7 @@ a {
     border: 2px solid #ffffff;
 
     text-transform: uppercase;
+    border-radius: 3px;
 }
 
 .btn-filter:hover {
@@ -492,7 +573,7 @@ li.sort-list-title {
 
 .search-result-item {
     display: flex;
-    padding: 30px 72px;
+    padding: 28px 72px;
 
     border-bottom: 1px solid #e5e5e5;
 }
@@ -638,7 +719,7 @@ li.sort-list-title {
     display: flex;
     justify-content: space-between;
     width: 151px;
-    margin: 36px 0;
+    margin: 43px 0;
 
     font-size: 0;
     list-style: none;
@@ -765,6 +846,7 @@ li.sort-list-title {
 }
 
 .search-form input[type="text"] {
+    position: relative;
     margin-left: auto;
     padding: 8px 13px;
     
@@ -783,6 +865,39 @@ li.sort-list-title {
     background-color: #ffffff;
     outline: 2px solid #e5e5e5;
 }
+
+.search-form .calendar-1::before,
+.search-form .calendar-2::before {
+    content: "";
+    position: absolute;
+    right: 65px;
+    top: 63px;
+    width: 22px;
+    height: 22px;
+    background-image: url(../img/popup-calendar-grey.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.search-form .calendar-2::before {
+    top: 130px;
+}
+
+.search-form .calendar-1:hover::before,
+.search-form .calendar-2:hover::before {
+    background-image: url(../img/popup-calendar-black.svg);
+
+    cursor: pointer;
+}
+
+.search-form .calendar-1:active::before,
+.search-form .calendar-2:active::before {
+    background-image: url(../img/popup-calendar-blue.svg);
+}
+
+
+
 
 .form-date-in,
 .form-date-out {
@@ -825,6 +940,7 @@ li.sort-list-title {
 
 .btn-adults-minus:hover {
     background-color: #ebebeb;
+    cursor: pointer;
 }
 
 .btn-adults-minus::before {
@@ -839,6 +955,7 @@ li.sort-list-title {
 
 .btn-adults-minus:hover::before {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-adults-minus:active::before {
@@ -856,6 +973,7 @@ li.sort-list-title {
 
 .btn-adults-plus:hover {
     background-color: #ebebeb;
+    cursor: pointer;
 }
 
 .btn-adults-plus::before {
@@ -875,6 +993,7 @@ li.sort-list-title {
 
 .btn-adults-plus:hover::before {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-adults-plus:active::before {
@@ -897,6 +1016,7 @@ li.sort-list-title {
 
 .btn-adults-plus:hover::after {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-adults-plus:active::after {
@@ -919,6 +1039,7 @@ li.sort-list-title {
 
 .btn-children-minus:hover {
     background-color: #ebebeb;
+    cursor: pointer;
 }
 
 .btn-children-minus::before {
@@ -932,6 +1053,7 @@ li.sort-list-title {
 
 .btn-children-minus:hover::before {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-children-minus:active::before {
@@ -966,6 +1088,7 @@ li.sort-list-title {
 
 .btn-children-plus:hover::before {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-children-plus:active::before {
@@ -986,6 +1109,7 @@ li.sort-list-title {
 
 .btn-children-plus:hover::after {
     background-color: #000000;
+    cursor: pointer;
 }
 
 .btn-children-plus:active::after {
@@ -998,6 +1122,7 @@ li.sort-list-title {
 
 .search-form button:hover {
     color: #000000;
+    cursor: pointer;
 }
 
 .search-form button:active  {
@@ -1027,6 +1152,7 @@ li.sort-list-title {
 .search-form-btn[type="submit"]:hover {
     color: #ffffff;
     background-color: #669ec0;
+    cursor: pointer;
 }
 
 .search-form-btn[type="submit"]:active {
