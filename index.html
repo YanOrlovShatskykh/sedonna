@@ -109,13 +109,13 @@
           </ul>
         </section>
         <section class="search">
-          <!-- <h2 class="visually-hidden">Форма поиска</h2> -->
+          <h2 class="visually-hidden">Форма поиска</h2>
           <b>Заинтересовались?</b>
           <p>
             Укажите предполагаемые даты поездки, <br>
               и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <button class="button">Поиск гостиницы в Седоне</button>
+          <button class="button js-button">Поиск гостиницы в Седоне</button>
         </section>  
         <div class="map">
           <img src="img/index-map.jpg" width="1200" height="593" alt="Карта">
@@ -158,5 +158,15 @@
         </form>
       </section>
     </div>
+
+    <script>
+      var searchOpen = document.querySelector('.js-button');
+      var popup = document.querySelector('.modal');
+
+      searchOpen.addEventListener('click', (evt)=> {
+        evt.preventDefault();
+        popup.classList.toggle('modal-show');
+      });
+    </script>
   </body>  
 </html>

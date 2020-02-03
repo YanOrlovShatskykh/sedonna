@@ -824,6 +824,8 @@ li.sort-list-title {
     position: absolute;
     bottom: 205px;
     left: 316px;
+
+    display: none;
     width: 458px;
     height: 285px;
     margin: 0 auto;
@@ -836,6 +838,11 @@ li.sort-list-title {
 
     background-color: #ffffff;
 }
+
+.modal-show {
+    display: block;
+}
+
 .search-form {
     display: flex;
     flex-wrap: wrap;
