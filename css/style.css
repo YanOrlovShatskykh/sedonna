@@ -800,18 +800,16 @@ li.sort-list-title {
     height: 41px;
     margin: auto 0;
 
-    font-size: 0;
-    line-height: 26px;
+    line-height: 41px;
     font-weight: 700;
     color: #000000;
 
-    background-image: url(../img/footer-icon-logo_name.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .footer-copyright a:hover {
-    background-image: url(../img/footer-icon-logo_name-blue.svg);
+    color: #81b3d2;
 }
 
 .footer-copyright a:active {
